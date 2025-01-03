@@ -23,11 +23,13 @@ int main(){
 
 printf("Hola! Bienvenido!\n");
 printf("Indicanos, eres cliente o administrador?\n");
-printf("1.Administrador\n2.Cliente\n3. Acerca de...\n");
+printf("1.Administrador\n2.Cliente\n3. Acerca de...\n4. Salir\n");
 int profile=0;
 bool admin=false;
 bool client=false;
+bool active=true;
 cin>>profile;
+do{
 if(profile==1){
     int accessPin=0;
     int adminChoice=0;
@@ -105,5 +107,24 @@ if(profile==2){
     }while(client);
 }
 
+if(profile==3){
+    do{
+    printf("Este proyecto fue realizado por el estudiante\nVictor Miranda\nComo parte de la evaluacion de la materia");
+    printf("Espero sea de su agrado :)\n");
+    printf("5. Para regresar\n");
+    cin>>profile;
+    if(profile != 1 or profile != 2 or profile != 3){
+        printf("Numero invalido, por favor, ingrese un numero correcto\n");
+    }
+    }while(profile != 5);
+}
+
+if(profile==4){
+    printf("Gracias por preferirnos\n");
+    active=false;
+}
+}while(active);
+
+return 0;
 
 }
