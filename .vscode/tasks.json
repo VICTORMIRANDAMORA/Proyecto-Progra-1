@@ -2,14 +2,16 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
+            "label": "C/C++: g++.exe build multiple files",
             "command": "D:\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${fileDirname}\\ProyectoVerano1.cpp",
+                "${fileDirname}\\Evento.cpp",
+                "${fileDirname}\\metodosFunciones.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\Programa.exe"
             ],
             "options": {
                 "cwd": "D:\\bin"
