@@ -2,6 +2,7 @@
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.default.compilerPath": "D:\\MinGW\\ucrt64\\bin\\gcc.exe",
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "new": "cpp"
     }
 }

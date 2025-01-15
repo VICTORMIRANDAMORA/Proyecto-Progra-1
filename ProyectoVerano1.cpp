@@ -28,9 +28,6 @@ class Persona{
 
     Persona(const string& nombre, const string& fechaNaciemiento, int cedula) : nombre(nombre), fechaNaciemiento(fechaNaciemiento), cedula(cedula){}
 
-    void mostrarDatos() const{
-        cout<<"Nombre: "<<nombre<<", Fecha de nacimiento: "<<fechaNaciemiento<<", Cedula: "<<cedula<<endl;
-    }
 };
 
 class ListaPersonas{
@@ -68,11 +65,6 @@ class ListaPersonas{
         personas[cantidad++]=new Persona(nombre,fechaNaciemiento, cedula);
     }
 
-    void mostrarPersonas() const{
-        for(int i=0; i<cantidad;i++){
-            personas[i]->mostrarDatos();
-        }
-    }
 };
 
 char validarRespuesta(){
@@ -300,13 +292,12 @@ void crearPersonas(string** graderia,int totalFilas, int totalColumnas, int* fil
         imprimirGraderia(graderia,totalFilas,totalColumnas,filas,numeroSegmentos,nombreEvento);
         seleccionarAsientos(graderia,totalFilas,totalColumnas,5);
         if((entradasTotales-entradasVendidas)!=0){
+        cout<<"Has comprado tus entradas\n";
         cout<<"Desea agregar otro comprador? (s/n): ";
         opcion=validarRespuesta();
         }
     }while(opcion=='s' and (entradasTotales-entradasVendidas)!=0);
 
-    cout<<"Lista de compradores:\n";
-    lista.mostrarPersonas();
 }
 
 
